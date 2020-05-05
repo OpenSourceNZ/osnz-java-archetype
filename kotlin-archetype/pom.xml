@@ -1,0 +1,79 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>nz.net.osnz</groupId>
+    <artifactId>kotlin-archetype</artifactId>
+    <packaging>maven-archetype</packaging>
+    <version>1.2-SNAPSHOT</version>
+
+    <name>kotlin-archetype</name>
+    <description>OSNZ Kotlin archetype</description>
+    <url>https://github.com/OpenSourceNZ/kotlin-archetype</url>
+
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>kdeng</id>
+            <name>Kefeng Deng</name>
+            <email>deng@51any.com</email>
+        </developer>
+    </developers>
+
+    <scm>
+        <url>https://github.com/OpenSourceNZ/kotlin-archetype</url>
+        <connection>scm:git:git@github.com:OpenSourceNZ/kotlin-archetype.git</connection>
+        <developerConnection>scm:git:git@github.com:OpenSourceNZ/kotlin-archetype.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+
+    <properties>
+        <!-- distribution information -->
+        <repository.release.id>oss-release</repository.release.id>
+        <repository.release.url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</repository.release.url>
+        <repository.snapshot.id>oss-snapshot</repository.snapshot.id>
+        <repository.snapshot.url>https://oss.sonatype.org/content/repositories/snapshots/</repository.snapshot.url>
+    </properties>
+
+    <build>
+        <extensions>
+            <extension>
+                <groupId>org.apache.maven.archetype</groupId>
+                <artifactId>archetype-packaging</artifactId>
+                <version>3.0.1</version>
+            </extension>
+        </extensions>
+
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-archetype-plugin</artifactId>
+                    <version>3.0.1</version>
+                    <extensions>true</extensions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+
+        <plugins>
+            <plugin>
+                <groupId>io.repaint.maven</groupId>
+                <artifactId>tiles-maven-plugin</artifactId>
+                <version>2.12</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <tiles>
+                        <tile>io.osnz.tiles:release-tile:[1.2,2)</tile>
+                    </tiles>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

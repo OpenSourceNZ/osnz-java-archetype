@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archetype-descriptor name="basic">
+  <requiredProperties>
+    <requiredProperty key="groupId">
+      <defaultValue>io.osnz.demos</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="artifactId">
+      <defaultValue>groovy-app</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="version">
+      <defaultValue>1.1-SNAPSHOT</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="package">
+      <defaultValue>io.osnz</defaultValue>
+    </requiredProperty>
+  </requiredProperties>
+  <fileSets>
+    <fileSet encoding="UTF-8" filtered="true" packaged="true">
+      <directory>src/main/groovy</directory>
+      <includes>
+        <include>**/*.groovy</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8" filtered="false">
+      <directory>src/main/resources</directory>
+      <includes>
+        <include>**/*.properties</include>
+        <include>**/*.xml</include>
+        <include>**/*.yaml</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8" filtered="true" packaged="true">
+      <directory>src/test/groovy</directory>
+      <includes>
+        <include>**/*.groovy</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8" filtered="false">
+      <directory>src/test/resources</directory>
+      <includes>
+        <include>**/*.properties</include>
+        <include>**/*.xml</include>
+        <include>**/*.yaml</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory>.</directory>
+      <includes>
+        <include>.gitignore</include>
+        <include>.editorconfig</include>
+      </includes>
+    </fileSet>
+  </fileSets>
+</archetype-descriptor>

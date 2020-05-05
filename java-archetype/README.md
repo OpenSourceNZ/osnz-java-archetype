@@ -1,0 +1,1 @@
+# OSNZ Java Archetype
